@@ -13,7 +13,7 @@ export async function fetchImages(value, page = 1) {
   //   per_page: 40,
   // });
   const response = await axios.get(
-    `?q=value&key&29332799-a92cd8e6a78297bd57d7c923a&image_type=photo`
+    `?q=value&key=29332799-a92cd8e6a78297bd57d7c923a&image_type=photo`
   );
   // const response = await axios.get(`${BASE_URL}?${searchParams}`);
   return response;
