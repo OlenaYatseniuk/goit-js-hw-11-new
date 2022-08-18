@@ -80,9 +80,9 @@ async function updateMarkup(value) {
     refs.galleryDiv.insertAdjacentHTML('beforeend', markup);
     lightbox.refresh();
     observer.observe(refs.guard);
-   }// catch (error) {
-  //   console.log(error.message);
-  // }
+  } catch (error) {
+    console.log(error.message);
+  }
 }
 
 const lightbox = new SimpleLightbox('.gallery a', {
