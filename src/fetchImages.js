@@ -3,18 +3,16 @@ axios.defaults.baseURL = 'https://pixabay.com/api';
 const BASE_URL = 'https://pixabay.com/api';
 
 export async function fetchImages(value, page = 1) {
-  // const searchParams = new URLSearchParams({
-  //   key: '29332799-a92cd8e6a78297bd57d7c923a',
-  //   q: value,
-  //   image_type: 'photo',
-  //   orientation: 'horizontal',
-  //   safesearch: true,
-  //   page: page,
-  //   per_page: 40,
-  // });
-  const response = await axios.get(
-    `?q=value&key=29332799-a92cd8e6a78297bd57d7c923a&image_type=photo`
-  );
+  const searchParams = new URLSearchParams({
+    key: '29332799-a92cd8e6a78297bd57d7c923a',
+    q: value,
+    image_type: 'photo',
+    orientation: 'horizontal',
+    safesearch: true,
+    page: page,
+    per_page: 40,
+  });
+  const response = await axios.get(`?${searchParams}`);
   // const response = await axios.get(`${BASE_URL}?${searchParams}`);
   return response;
 }
